@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Stepper() {
 
     let [step, setStep] = useState(3)
+    let [test, setTest] = useState(0)
 
     let handlerAtras = () => {
         if (step !== 1) {
@@ -17,6 +18,17 @@ export default function Stepper() {
         if (step !== 3)
             setStep(step + 1)
     }
+
+    let handlerTest = () => {
+        setTest(test + 1)
+        console.log(test);
+    }
+
+    useEffect(() => {
+        console.log('efecto');
+
+    }, [step])
+
     return (
         <>
             <div>
@@ -29,6 +41,7 @@ export default function Stepper() {
             </div >
             <button onClick={handlerAtras}>Atras</button>
             <button onClick={handlerAdelante}>adelante</button>
+            <button onClick={handlerTest}>test</button>
         </>
     )
 }
