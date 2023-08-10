@@ -6,9 +6,9 @@ import Stepper from '../components/Stepper'
 export default function Home() {
     return (
         <>
-            <Stepper />
+            {/* <Stepper /> */}
             <Main />
-            {/* <Carrousel /> */}
+
         </>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import na from './NavLink'
+import { Link as Anchor, Link } from "react-router-dom"
 import NavLink from './NavLink'
 import style from './style.css'
 export default function Nav() {
@@ -9,22 +9,21 @@ export default function Nav() {
         // { href: 'logIn.html', text: 'Login' },
 
     ]
-    let [title, setTitle] = useState('title')
 
 
-    const handlerTitle = () => {
-        setTitle('title changed')
-    }
+
+
 
 
 
     return (
         <nav className="nav">
             <ul className='nav__links'>
-                {data.map((link, key) => <NavLink key={key} href={link.href} text={link.text} />)}
-                <li><a href="">{title}</a></li>
-                <button className='nav__button'></button>
-                <button onClick={handlerTitle}>cambiar title</button>
+                {/* {data.map((link, key) => <Link to={} key={key} href={link.href} text={link.text} />)} */}
+                <li><Anchor className='nav__link' to={'/'}>Home</Anchor></li>
+                <li><Anchor className='nav__link' v to={'/cities'}>Cities</Anchor></li>
+                <button className='nav__button'>login</button>
+
             </ul>
 
 

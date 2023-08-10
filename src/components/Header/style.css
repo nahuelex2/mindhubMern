@@ -5,4 +5,10 @@
     justify-content: space-evenly;
     color: black;
     align-items: center;
+    background-color: rgb(70, 69, 69);
+    padding: 1rem;
+}
+
+.header__logo {
+    color: white;
 }
